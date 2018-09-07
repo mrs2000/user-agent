@@ -72,7 +72,8 @@ return [
         'amaya' => 'Amaya',
         'IBrowse' => 'IBrowse',
         'Maxthon' => 'Maxthon',
-        'Ubuntu' => 'Ubuntu Web Browser'
+        'Ubuntu' => 'Ubuntu Web Browser',
+        'YandexSearchBrowser' => 'Yandex Mobile App'
     ],
     'mobiles' => [
         // legacy array, old values commented out
@@ -155,7 +156,7 @@ return [
         'up.link' => 'Generic Mobile',
         'up.browser' => 'Generic Mobile',
         'smartphone' => 'Generic Mobile',
-        'cellphone' => 'Generic Mobile'
+        'cellphone' => 'Generic Mobile',
     ],
     'robots' => [
         'googlebot' => 'Googlebot',

@@ -37,7 +37,7 @@ class UserAgent
 
         if ($this->agent !== null) {
 
-            $data = include(__DIR__ . '/data.php');
+            $data = include __DIR__ . '/data.php';
 
             $this->platforms = $data['platforms'];
             $this->browsers = $data['browsers'];
@@ -58,14 +58,14 @@ class UserAgent
             }
         }
 
-        $this->info = $this->browser . ' ' . $this->version . ', '. $this->platform;
+        $this->info = $this->browser . ' ' . $this->version . ', ' . $this->platform;
     }
 
     protected function setPlatform()
     {
         if (is_array($this->platforms) && count($this->platforms) > 0) {
             foreach ($this->platforms as $key => $val) {
-                if (preg_match('|' . preg_quote($key) . '|i', $this->agent)) {
+                if (preg_match('|' . preg_quote($key, '|') . '|i', $this->agent)) {
                     $this->platform = $val;
 
                     return true;
@@ -100,7 +100,7 @@ class UserAgent
     {
         if (is_array($this->robots) && count($this->robots) > 0) {
             foreach ($this->robots as $key => $val) {
-                if (preg_match('|' . preg_quote($key) . '|i', $this->agent)) {
+                if (preg_match('|' . preg_quote($key, '|') . '|i', $this->agent)) {
                     $this->is_robot = true;
                     $this->robot = $val;
                     $this->setMobile();
@@ -117,7 +117,7 @@ class UserAgent
     {
         if (is_array($this->mobiles) && count($this->mobiles) > 0) {
             foreach ($this->mobiles as $key => $val) {
-                if (false !== (stripos($this->agent, $key))) {
+                if (false !== stripos($this->agent, $key)) {
                     $this->is_mobile = true;
                     $this->mobile = $val;
 

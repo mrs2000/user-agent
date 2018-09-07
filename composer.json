@@ -1,6 +1,6 @@
 {
     "name": "mrssoft/user-agent",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Identifies the platform, browser, robot, or mobile device of the browsing agent",
     "keywords": ["browser","user agent"],
     "license": "MIT",
